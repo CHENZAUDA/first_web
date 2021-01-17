@@ -1,0 +1,212 @@
+body{
+    background: chocolate;
+    text-align: center;
+    width: 97%;
+    height: 100%;
+    background-image: linear-gradient(315deg, #E8A873 20%, #F99EB2 74%);
+    background-size:cover;
+    background-repeat:no-repeat;
+    font-size: x-large;
+    color:#6b280e;
+    font-family: 'Architects Daughter', cursive;
+
+
+}
+h1 ,h2, h3{
+    color:#f8f7f6;
+    font-size: x-large;
+    font-family: 'Staatliches', cursive; 
+}
+#home_page{
+    width: 150px;
+    height: 40px;
+    border: 2px solid white;
+    background-color: #ded7b1;
+    font-family:  'Yellowtail', cursive;
+    border-radius: 25px;
+    text-decoration: none;
+    margin:  5px 323px 60px 35px;
+    position: fixed;
+    top: 3%;
+}
+
+#home_page a{
+   
+    display: inline;
+    margin: 2%;
+    text-decoration: none;
+}
+#home_page a:hover{
+    color: #e08f62;
+}
+
+.grid{
+    display: grid;
+    grid-gap:7px;
+    justify-content: space-between;
+    grid-template-areas: 
+   'header header header header'
+   'content content content sidebar'
+   'pic_1 pic_1 recommend sidebar'
+   'pic_2 pic_2 recommend sidebar'
+   'fotter footer footer footer';
+   grid-template-rows: 10% repeat(3, 1fr) 10% ;
+ 
+}
+@media (max-width: 700px ){
+    .grid {grid-template-areas:'header'
+                               'content'
+                               'sidebar'
+                               'pic_1'
+                               'pic_2'
+                               'recommend'
+                               'footer';
+        /* grid-template-columns: 450px; */
+    }
+}
+
+.header, .content, .pic_1, .pic_2, .sidebar, .recommend, .footer{
+   padding: 15px;
+   font-family: 'Architects Daughter', cursive;
+
+   /* background: #f1b99c;
+   border: 2px solid #ffffff; */
+   font-size: large;
+   display: flex;
+   flex-direction: column;
+}
+
+.header:hover, .content:hover, .pic_1:hover, .pic_2:hover, .sidebar:hover, .recommend:hover, .footer:hover{
+    /* box-shadow: 4px -4px whitesmoke; */
+    transform: scale(1,1.3);
+
+}
+.header{
+    grid-area: header;
+}
+
+.content{
+    grid-area: content;
+
+}
+
+.sidebar{
+    grid-area: sidebar;  
+    display: inline-block;
+    position: relative;
+}
+.menu button {
+    background-color: #c55677;
+    color: white;
+   padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 35%;
+  }
+  
+  
+  .item {
+    display: none;
+    position: relative;
+    background-color: #f1f1f15e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 254, 254, 0.904);
+    z-index: 1;
+  }
+  
+  .item a {
+    color: #ffffff;
+    padding: 5px 6px;
+    text-decoration: none;
+    display: block;
+    border-radius: 17%;
+  }
+  
+  .item a:hover {
+      background-color:rgba(240, 158, 104, 0.973);
+    }
+  
+  .menu:hover .item {
+      display: block;
+    }
+  
+  .menu:hover .title1 {
+      background-color:  #b41947;
+    }
+
+.sidebar .message{
+   position:relative;
+   text-decoration: none;
+   background-color: #c55677;
+  
+}
+.sidebar .message:visited{
+    text-decoration: #c7753d;
+}
+.pic_1{
+    grid-area: pic_1;
+    align-items: center;
+}
+
+.pic_2{
+    grid-area: pic_2;
+    align-items: center;
+}
+.recommend{
+    grid-area: recommend;
+    margin-left: 11px;
+    align-content:center;
+}
+.footer{
+    position: relative;
+    left: 0px;
+    grid-area: footer;
+}
+#photo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#photo .space{
+    border-radius: 5%;
+    width: 30%;
+    height: min-content;
+    align-content: space-between;
+}
+img{
+    padding: 0px;
+    border:1px solid whitesmoke;
+    border-radius: 10%;
+    box-shadow: 4px -4px whitesmoke;
+}
+img:hover{
+    filter: blur(3px);
+}
+.chat{
+    width: 70px;
+    height: 70px;
+    background-color:#c7753d;
+    color: white;
+    font-style: oblique;
+    padding-top: 3px;
+    position: fixed;
+    border-radius: 150px 150px 150px 0px;
+    top: 70%;
+    left: 0%;
+    animation: chat 5s linear 1s 2 alternate;
+    z-index: 1;
+}
+@keyframes chat{
+    0%{left:0%; background:#c7753d; transform: rotate(0deg);}
+    50%{ background:#e9c596}
+    100%{left: 88%; background:#ff7d04;; transform: rotate(360deg);}
+}
+.chat:hover{
+    animation-play-state: paused;
+    }  
+ #paymant{
+     width: 100vw;
+     height: 100vh;
+     position: relative;
+     top: 35px;
+ }
