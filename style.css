@@ -27,7 +27,8 @@ h1 ,h2, h3{
     text-decoration: none;
     margin:  5px 323px 60px 35px;
     position: fixed;
-    top: 3%;
+    top: 3%; 
+    z-index: 1;
 }
 
 #home_page a{
@@ -51,6 +52,7 @@ h1 ,h2, h3{
    'pic_2 pic_2 recommend sidebar'
    'fotter footer footer footer';
    grid-template-rows: 10% repeat(3, 1fr) 10% ;
+   
  
 }
 @media (max-width: 700px ){
@@ -60,24 +62,21 @@ h1 ,h2, h3{
                                'pic_1'
                                'pic_2'
                                'recommend'
-                               'footer';
-        /* grid-template-columns: 450px; */
+                               'footer'; 
+        
     }
 }
 
 .header, .content, .pic_1, .pic_2, .sidebar, .recommend, .footer{
    padding: 15px;
    font-family: 'Architects Daughter', cursive;
-
-   /* background: #f1b99c;
-   border: 2px solid #ffffff; */
    font-size: large;
    display: flex;
    flex-direction: column;
+ 
 }
 
 .header:hover, .content:hover, .pic_1:hover, .pic_2:hover, .sidebar:hover, .recommend:hover, .footer:hover{
-    /* box-shadow: 4px -4px whitesmoke; */
     transform: scale(1,1.3);
 
 }
@@ -120,6 +119,7 @@ h1 ,h2, h3{
     text-decoration: none;
     display: block;
     border-radius: 17%;
+    background-color:  #b41947;
   }
   
   .item a:hover {
@@ -134,15 +134,15 @@ h1 ,h2, h3{
       background-color:  #b41947;
     }
 
-.sidebar .message{
+.sidebar #message a{
    position:relative;
    text-decoration: none;
    background-color: #c55677;
+   color: whitesmoke;
+   border-radius: 17%;
   
 }
-.sidebar .message:visited{
-    text-decoration: #c7753d;
-}
+
 .pic_1{
     grid-area: pic_1;
     align-items: center;
@@ -159,28 +159,37 @@ h1 ,h2, h3{
 }
 .footer{
     position: relative;
-    left: 0px;
+    left: 25%;
     grid-area: footer;
+    background-color: #c55677;
+    width: fit-content;
+    border-radius: 17%;
+
 }
 #photo{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+
 #photo .space{
     border-radius: 5%;
     width: 30%;
     height: min-content;
-    align-content: space-between;
+    align-content: space-between;  
 }
+
 img{
     padding: 0px;
     border:1px solid whitesmoke;
     border-radius: 10%;
     box-shadow: 4px -4px whitesmoke;
+    filter: blur(3px);
+  
+
 }
 img:hover{
-    filter: blur(3px);
+    filter: blur(0px);
 }
 .chat{
     width: 70px;
@@ -209,4 +218,10 @@ img:hover{
      height: 100vh;
      position: relative;
      top: 35px;
+ }
+ svg{
+    border-radius: 17%;
+     background-color: whitesmoke;
+     float: right;
+     clear: none;
  }
